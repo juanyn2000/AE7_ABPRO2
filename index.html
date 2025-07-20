@@ -56,6 +56,43 @@
           </div>
         </div>
       </div>
+      <h2 class="text-start mt-5">Solicitar Reparación</h2>
+    </section>
+    <section class="container formulario mt-5 d-flex justify-content-center">
+        <form action="submit" class="needs-validation col-12 col-md-4  align-items-center" novalidate>
+            <label for="Nombre">Nombre del cliente</label>
+            <input type="text" id="Nombre" name="Nombre" class="form-control mb-3 " required>
+            <label for="reparacion">Tipo de reparación</label>
+            <select id="reparacion" name="reparacion" class="form-select mb-3 " required>
+                <option value="" disabled selected>Seleccione una opción</option>
+                <option value="cambio_aceite">Cambio de aceite</option>
+                <option value="revision_frenos">Revisión de frenos</option>
+                <option value="diagnostico">Diagnóstico eléctrico</option>
+            </select>
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" name="descripcion" class="form-control mb-3 " rows="4" required></textarea>
+            <label for="fecha">Agendar cita</label>
+            <input type="date" id="fecha" name="fecha" class="form-control mb-3 " required>
+            <h3>Información de pago</h3>
+            <div class="mb-3">
+              <label for="tarjeta" class="form-label">Número de tarjeta</label>
+              <input type="text" class="form-control " id="tarjeta" placeholder="**** **** **** 1234" required>
+              <div class="invalid-feedback">Por favor complete este campo</div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="titular" class="form-label">Nombre del titular</label>
+              <input type="text" class="form-control " id="titular" required>
+            </div>
+            <div class="mb-3">
+              <label for="cvv" class="form-label">CVV</label>
+              <input type="text" class="form-control " id="cvv" maxlength="3"  pattern="\d{3}" required>
+            </div>
+          </div>
+            <button type="submit" class="btn btn-success">Confirmar Solicitud</button>
+
+        </form>
+    </section>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/script.js"></script>
 
